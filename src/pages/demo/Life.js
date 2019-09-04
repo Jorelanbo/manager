@@ -1,5 +1,5 @@
 import React from 'react'
-import './life.css'
+import './life.less'
 import {Button} from "antd";
 
 export default class Life extends React.Component{
@@ -23,9 +23,9 @@ export default class Life extends React.Component{
     };
 
     render() {
-        let style = {
-          padding: 50
-        };
+        // let style = {
+        //     padding: 50
+        // };
         return <div className="content">
             <p>React生命周期介绍</p>
             <Button type="primary" onClick={this.handleAdd.bind(this)}>antd点击一下</Button>
