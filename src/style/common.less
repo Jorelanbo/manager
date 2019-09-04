@@ -1,14 +1,17 @@
+@import "./default";
+
 .container {
   display: flex;
   .nav-left {
     min-width: 180px;
     height: calc(100vh);
-    background-color: #abcdef;
+    color: #ffffff;
+    background-color: #001529;
   }
   .main {
     flex: 1;
     height: calc(100vh);
-    background-color: antiquewhite;
+    background-color: @colorL;
   }
   .content {
     position: relative;

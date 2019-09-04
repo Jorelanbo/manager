@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Life from "./pages/demo/Life";
 import Admin from "./admin"
 
 ReactDOM.render(<Admin/>, document.getElementById('root'));
