@@ -21,6 +21,9 @@ export default class Header extends React.Component{
         this.getWeatherAPIData();
     }
 
+    /**
+     * 通过百度获取天气信息
+     */
     getWeatherAPIData() {
         let city = '武汉';
         axios.jsonp({
