@@ -19,15 +19,16 @@ export default class Modals extends React.Component{
         });
     };
 
-    handleOkModal = (type) => {
-        this.setState({
-            [type]: false
-        });
-    };
-
-    handleCancelModal = (type) => {
-        this.setState({
-            [type]: false
+    handleConfirm = (type) => {
+        Modal[type]({
+            title: "确认",
+            content: "你确认你学会了react吗？",
+            onOk: () => {
+                console.log("牛逼！");
+            },
+            onCancel: () => {
+                console.log("加油！");
+            }
         });
     };
 
@@ -40,32 +41,43 @@ export default class Modals extends React.Component{
                     <Button type="primary" onClick={() => this.handleOpen('showModal3')}>顶部20px弹框</Button>
                     <Button type="primary" onClick={() => this.handleOpen('showModal4')}>水平垂直居中</Button>
                 </Card>
+                <Card title="信息确认框" className="card-wrap">
+                    <Button type="primary" onClick={() => this.handleConfirm('confirm')}>Confirm</Button>
+                    <Button type="primary" onClick={() => this.handleConfirm('info')}>Info</Button>
+                    <Button type="primary" onClick={() => this.handleConfirm('success')}>Success</Button>
+                    <Button type="primary" onClick={() => this.handleConfirm('warning')}>Warning</Button>
+                    <Button type="primary" onClick={() => this.handleConfirm('error')}>Error</Button>
+                </Card>
                 <Modal
                 title="React"
-                visible={this.state.showModal1}
-                onOk={() => this.handleOkModal( 'showModal1')}
-                onCancel={() => this.handleCancelModal( 'showModal1')}>
-                    <p>Some contents.(Open)</p>
+                    visible={this.state.showModal1}
+                    onOk={() => {this.setState({showModal1: false})}}
+                    onCancel={() => {this.setState({showModal1: false})}}>
+                    <p>欢迎学习React！</p>
                 </Modal>
                 <Modal
                     title="React"
                     visible={this.state.showModal2}
-                    onOk={() => this.handleOkModal( 'showModal2')}
-                    onCancel={() => this.handleCancelModal( 'showModal2')}>
-                    <p>Some contents.(自定义页脚)</p>
+                    okText="好的"
+                    cancelText="算了"
+                    onOk={() => {this.setState({showModal2: false})}}
+                    onCancel={() => {this.setState({showModal2: false})}}>
+                    <p>页脚文字不一样</p>
                 </Modal>
                 <Modal
                     title="React"
+                    style={{top: 20}}
                     visible={this.state.showModal3}
-                    onOk={() => this.handleOkModal( 'showModal3')}
-                    onCancel={() => this.handleCancelModal( 'showModal3')}>
+                    onOk={() => {this.setState({showModal3: false})}}
+                    onCancel={() => {this.setState({showModal3: false})}}>
                     <p>Some contents.(顶部20px弹框)</p>
                 </Modal>
                 <Modal
                     title="React"
+                    wrapClassName="vertical-center-modal"
                     visible={this.state.showModal4}
-                    onOk={() => this.handleOkModal( 'showModal4')}
-                    onCancel={() => this.handleCancelModal( 'showModal4')}>
+                    onOk={() => {this.setState({showModal4: false})}}
+                    onCancel={() => {this.setState({showModal4: false})}}>
                     <p>Some contents.(水平垂直居中)</p>
                 </Modal>
             </div>
