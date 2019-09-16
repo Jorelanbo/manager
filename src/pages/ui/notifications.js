@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button, Icon, Alert, notification } from "antd";
+import { Card, Button, notification } from "antd";
 import './ui.less';
 
 export default class Notifications extends React.Component{
