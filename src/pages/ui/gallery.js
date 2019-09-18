@@ -31,7 +31,7 @@ export default class Gallery extends React.Component {
             <Card
                 key={Math.random()} // 指定key值
                 hoverable
-                style={{width:250,marginBottom: 30}}
+                style={{width:240,marginBottom: 30}}
                 cover={<img alt="example" src={'/gallery/' + item}/>}
                 onClick={() => {this.openGallery(item)}}
             >
@@ -44,7 +44,7 @@ export default class Gallery extends React.Component {
         console.log(imgList);
         return (
             <div>
-                <Row gutter={32}>
+                <Row>
                     <Col md={5}>
                         {imgList[0]}
                     </Col>
