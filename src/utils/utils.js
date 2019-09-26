@@ -45,5 +45,20 @@ export default {
         minute = minute < 10 ? "0" + minute : minute;
         second = second < 10 ? "0" + second : second;
         return y + "-" + m + "-" + d + " " + h + ":" + minute + ":" + second;
+    },
+
+    pagination(data, callback) {
+        return  {
+            onChange: current => {
+                callback(current);
+            },
+            // current: data.page,
+            pageSize: data.pageSize,
+            total: data.total,
+            showTotal: () => {
+                return `共${data.total}条`;
+            },
+            showQuickJumper: true
+        }
     }
 }

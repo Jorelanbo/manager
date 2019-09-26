@@ -2,8 +2,14 @@ import React from 'react'
 import axios from '../../axios'
 import { Card, Button, Table, Tag, Divider, Modal, message } from 'antd'
 import './ui.less'
+import '../../utils/utils'
+import utils from "../../utils/utils";
 
 export default class BasicTable extends React.Component{
+
+    params = {
+       page: 1
+    };
 
     constructor(props) {
         super(props);
@@ -11,26 +17,33 @@ export default class BasicTable extends React.Component{
             data2: [],
             selectedRowKeys: [],
             selectedCheckRowKeys: [],
+            pagination: {},
         };
         this.request();
     }
 
     request = () => {
+        // let _this = this;
         axios.ajax({
             url: '/dataResource/tableData.json',
             data: {
                 params: {
-                    page: 1
+                    page: this.params.page
                 },
                 isShowLoading: true
             }
         }).then(res => {
+            console.log(res);
             if (res.status === 200) {
                 let data = res.data;
                 this.setState({
                     data2: data,
                     selectedRowKeys: [],
                     selectedCheckRowKeys: [],
+                    pagination: utils.pagination(res, current => {
+                        this.params.page = current;
+                        this.request();
+                    })
                 })
             }
         });
@@ -213,6 +226,14 @@ export default class BasicTable extends React.Component{
                         columns={columns} // 列元素
                         dataSource={data} // 表格数据
                         pagination={false} // 是否分页
+                    />
+                </Card>
+                <Card title="基础分页表格" className="card-wrap">
+                    <Table
+                        bordered={false}  // 是否有边界
+                        columns={columns} // 列元素
+                        dataSource={this.state.data2} // 表格数据
+                        pagination={this.state.pagination} // 是否分页
                     />
                 </Card>
             </div>
