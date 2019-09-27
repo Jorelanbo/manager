@@ -1,0 +1,204 @@
+{
+  "status": 200,
+  "data": [
+    {
+      "id": 1,
+      "name": "贺州市",
+      "mode": 2,
+      "op_mode": 2,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "卢洋",
+          "user_id": 10001
+        }
+      ],
+      "open_time": "1996-08-30 02:53:30",
+      "sys_user_name": "陆平",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 2,
+      "name": "盐城市",
+      "mode": 1,
+      "op_mode": 2,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "崔娜",
+          "user_id": 10002
+        },
+        {
+          "user_name": "萧秀英",
+          "user_id": 10003
+        }
+      ],
+      "open_time": "2004-10-05 22:41:15",
+      "sys_user_name": "薛涛",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 3,
+      "name": "固原市",
+      "mode": 2,
+      "op_mode": 1,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "胡洋",
+          "user_id": 10004
+        }
+      ],
+      "open_time": "2013-07-10 23:08:41",
+      "sys_user_name": "谢军",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 4,
+      "name": "重庆市",
+      "mode": 1,
+      "op_mode": 1,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "汪强",
+          "user_id": 10005
+        }
+      ],
+      "open_time": "2005-05-26 06:06:07",
+      "sys_user_name": "孔明",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 5,
+      "name": "平凉市",
+      "mode": 1,
+      "op_mode": 1,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "汤洋",
+          "user_id": 10006
+        }
+      ],
+      "open_time": "2006-03-27 07:53:34",
+      "sys_user_name": "赵洋",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 6,
+      "name": "廊坊市",
+      "mode": 2,
+      "op_mode": 2,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "苏超",
+          "user_id": 10007
+        },
+        {
+          "user_name": "潘芳",
+          "user_id": 10008
+        }
+      ],
+      "open_time": "1989-03-08 07:59:40",
+      "sys_user_name": "沈秀英",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 7,
+      "name": "重庆市",
+      "mode": 2,
+      "op_mode": 1,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "郭明",
+          "user_id": 10009
+        },
+        {
+          "user_name": "袁娜",
+          "user_id": 10010
+        }
+      ],
+      "open_time": "1979-11-06 16:16:31",
+      "sys_user_name": "方伟",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 8,
+      "name": "上海市",
+      "mode": 2,
+      "op_mode": 2,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "程霞",
+          "user_id": 10011
+        },
+        {
+          "user_name": "夏平",
+          "user_id": 10012
+        }
+      ],
+      "open_time": "2000-12-28 20:10:25",
+      "sys_user_name": "彭杰",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 9,
+      "name": "天津市",
+      "mode": 1,
+      "op_mode": 1,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "张洋",
+          "user_id": 10013
+        },
+        {
+          "user_name": "汤秀英",
+          "user_id": 10014
+        }
+      ],
+      "open_time": "2011-12-01 16:27:53",
+      "sys_user_name": "罗静",
+      "update_time": 1520476737000
+    },
+    {
+      "id": 10,
+      "name": "上海市",
+      "mode": 1,
+      "op_mode": 2,
+      "franchisee_id": 77,
+      "franchisee_name": "松果自营",
+      "city_admins": [
+        {
+          "user_name": "段艳",
+          "user_id": 10015
+        },
+        {
+          "user_name": "冯敏",
+          "user_id": 10016
+        }
+      ],
+      "open_time": "2007-10-20 11:06:01",
+      "sys_user_name": "尹军",
+      "update_time": 1520476737000
+    }
+  ],
+  "page": 8,
+  "pageSize": 10,
+  "total": 60,
+  "page_count": 6,
+  "msg": "返回结果正确"
+}
